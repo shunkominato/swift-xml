@@ -21,11 +21,11 @@ class BaseViewController: SegementSlideDefaultViewController {
         // Do any additional setup after loading the view.
     }
     
-    override var headerView: UIView?{
+    override func segementSlideHeaderView() -> UIView {
         let headerView = UIImageView()
         headerView.isUserInteractionEnabled = true
         headerView.contentMode = .scaleToFill
-        headerView.image = UIImage(named: "")
+        headerView.image = UIImage(named: "header")
         headerView.translatesAutoresizingMaskIntoConstraints = false
         let headerHight:CGFloat
         if #available(iOS 11.0, *){
@@ -35,7 +35,7 @@ class BaseViewController: SegementSlideDefaultViewController {
             headerHight = view.bounds.height/4 + topLayoutGuide.length
         }
         
-        headerView.heightAnchor.constraint(equalTo: headerHight).isActive = true
+        headerView.heightAnchor.constraint(equalToConstant: headerHight).isActive = true
         
         return headerView
     }
@@ -45,7 +45,22 @@ class BaseViewController: SegementSlideDefaultViewController {
     }
     
     override func segementSlideContentViewController(at index: Int) -> SegementSlideContentScrollViewDelegate? {
-        <#code#>
+        switch index {
+        case 0:
+            return Page1TableViewController()
+        case 1:
+            return Page2TableViewController()
+        case 2:
+            return Page3TableViewController()
+        case 3:
+            return Page4TableViewController()
+        case 4:
+            return Page5TableViewController()
+        case 5:
+            return Page6TableViewController()
+        default:
+            return Page1TableViewController()
+        }
     }
     
 

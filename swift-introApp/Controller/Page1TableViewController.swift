@@ -56,7 +56,15 @@ class Page1TableViewController: UITableViewController,SegementSlideContentScroll
         // Configure the cell...
         cell.backgroundColor = .clear
         
-        let newsItems = self.news'
+        let newsItems = self.newsItems[indexPath.row]
+        
+        cell.textLabel?.text = newsItems.title
+        cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 15.0)
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.numberOfLines = 3
+        cell.detailTextLabel?.text = newsItems.url
+        cell.detailTextLabel?.textColor = .white
+        
 
         return cell
     }
@@ -65,6 +73,47 @@ class Page1TableViewController: UITableViewController,SegementSlideContentScroll
         return view.frame.size.height/5
     }
     
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
+        currentElemantName = nil
+        
+        if elementName == "item"{
+            self.newsItems.append(NewsItems())
+        }else{
+            currentElemantName = elementName
+        }
+    }
+    
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        if self.newsItems.count > 0{
+            let lastItem = self.newsItems[self.newsItems.count - 1]
+            switch self.currentElemantName {
+            case "title":
+                lastItem.title = string
+            case "link":
+                lastItem.url = string
+            case "pubDate":
+                lastItem.pubDate = string
+            default:
+                break
+            }
+        }
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        self.currentElemantName = nil
+    }
+    
+    func parserDidEndDocument(_ parser: XMLParser) {
+        self.tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let webViewController = WebViewController()
+        webViewController.modalTransitionStyle = .crossDissolve
+        let newsItem = newsItems[indexPath.row]
+        UserDefaults.standard.set(newsItem.url, forKey: "url")
+        present(webViewController, animated: true, completion: nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.

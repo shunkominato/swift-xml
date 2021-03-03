@@ -19,6 +19,12 @@
 		FA5A632525EE183800900D57 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5A632425EE183800900D57 /* BaseViewController.swift */; };
 		FAA20D4225EE22E100791C9A /* Page1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA20D4125EE22E100791C9A /* Page1TableViewController.swift */; };
 		FAA20D4525EE2E7E00791C9A /* NewsItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA20D4425EE2E7E00791C9A /* NewsItems.swift */; };
+		FAA20D4825EE69F600791C9A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA20D4725EE69F600791C9A /* WebViewController.swift */; };
+		FAA20D4B25EE708100791C9A /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA20D4A25EE708100791C9A /* Page2ViewController.swift */; };
+		FAA20D4E25EE719A00791C9A /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA20D4D25EE719A00791C9A /* Page3ViewController.swift */; };
+		FAA20D5125EE727900791C9A /* Page4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA20D5025EE727900791C9A /* Page4ViewController.swift */; };
+		FAA20D5425EE733E00791C9A /* Page5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA20D5325EE733E00791C9A /* Page5ViewController.swift */; };
+		FAA20D5725EE739500791C9A /* Page6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA20D5625EE739500791C9A /* Page6ViewController.swift */; };
 		FADE1F9C25EC6BFE00BECB99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1F9B25EC6BFE00BECB99 /* AppDelegate.swift */; };
 		FADE1F9E25EC6BFE00BECB99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE1F9D25EC6BFE00BECB99 /* SceneDelegate.swift */; };
 		FADE1FA325EC6BFE00BECB99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADE1FA125EC6BFE00BECB99 /* Main.storyboard */; };
@@ -40,6 +46,12 @@
 		FA5A632425EE183800900D57 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FAA20D4125EE22E100791C9A /* Page1TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1TableViewController.swift; sourceTree = "<group>"; };
 		FAA20D4425EE2E7E00791C9A /* NewsItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItems.swift; sourceTree = "<group>"; };
+		FAA20D4725EE69F600791C9A /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		FAA20D4A25EE708100791C9A /* Page2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2ViewController.swift; sourceTree = "<group>"; };
+		FAA20D4D25EE719A00791C9A /* Page3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
+		FAA20D5025EE727900791C9A /* Page4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4ViewController.swift; sourceTree = "<group>"; };
+		FAA20D5325EE733E00791C9A /* Page5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
+		FAA20D5625EE739500791C9A /* Page6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page6ViewController.swift; sourceTree = "<group>"; };
 		FABA64B561227B1BE34652B2 /* Pods-swift-introApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-introApp.release.xcconfig"; path = "Target Support Files/Pods-swift-introApp/Pods-swift-introApp.release.xcconfig"; sourceTree = "<group>"; };
 		FADE1F9825EC6BFE00BECB99 /* swift-introApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-introApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADE1F9B25EC6BFE00BECB99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +118,12 @@
 				FA5A631E25EDF5B500900D57 /* LoginMovieViewController.swift */,
 				FA5A632425EE183800900D57 /* BaseViewController.swift */,
 				FAA20D4125EE22E100791C9A /* Page1TableViewController.swift */,
+				FAA20D4725EE69F600791C9A /* WebViewController.swift */,
+				FAA20D4A25EE708100791C9A /* Page2ViewController.swift */,
+				FAA20D4D25EE719A00791C9A /* Page3ViewController.swift */,
+				FAA20D5025EE727900791C9A /* Page4ViewController.swift */,
+				FAA20D5325EE733E00791C9A /* Page5ViewController.swift */,
+				FAA20D5625EE739500791C9A /* Page6ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -268,10 +286,16 @@
 				FA5A632525EE183800900D57 /* BaseViewController.swift in Sources */,
 				FAA20D4525EE2E7E00791C9A /* NewsItems.swift in Sources */,
 				FA5A631B25EC754800900D57 /* IntroViewController.swift in Sources */,
+				FAA20D4E25EE719A00791C9A /* Page3ViewController.swift in Sources */,
 				FAA20D4225EE22E100791C9A /* Page1TableViewController.swift in Sources */,
+				FAA20D5425EE733E00791C9A /* Page5ViewController.swift in Sources */,
+				FAA20D4B25EE708100791C9A /* Page2ViewController.swift in Sources */,
 				FA5A631F25EDF5B500900D57 /* LoginMovieViewController.swift in Sources */,
 				FADE1F9C25EC6BFE00BECB99 /* AppDelegate.swift in Sources */,
+				FAA20D5125EE727900791C9A /* Page4ViewController.swift in Sources */,
+				FAA20D5725EE739500791C9A /* Page6ViewController.swift in Sources */,
 				FADE1F9E25EC6BFE00BECB99 /* SceneDelegate.swift in Sources */,
+				FAA20D4825EE69F600791C9A /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
